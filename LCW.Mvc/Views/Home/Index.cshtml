@@ -1,0 +1,41 @@
+﻿@model LCW.Mvc.ViewModels.ProductViewModel
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			@foreach (var item in Model.Products)
+			{
+				<div class="card" style="width: 18rem;">
+					<img src="@item.Picture" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">@item.Name</h5>
+						<p class="card-text">@item.Description.Substring(0,15)</p>
+						<a href="#" class="btn btn-primary"></a>
+					</div>
+				</div>
+			}
+
+		</div>
+		<div class="col-md-4">
+			<ul class="list-group">
+				@foreach (var item in Model.Categories)
+				{
+					<li class="list-group-item">@item.Name</li>
+
+				}
+
+			</ul>
+		</div>
+	</div>
+</div>
+
+

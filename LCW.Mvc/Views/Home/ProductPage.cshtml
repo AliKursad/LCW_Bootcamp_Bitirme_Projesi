@@ -1,0 +1,54 @@
+﻿@model LCW.Mvc.ViewModels.ProductViewModel
+
+
+
+<form enctype="multipart/form-data" asp-controller="Home" asp-action="SaveProduct" method="post">
+	<div class="form-group">
+		<label for="exampleFormControlInput1">Name</label>
+		<input type="text" name="Name" class="form-control" id="exampleFormControlInput1" placeholder="Product Name">
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlInput1">Price</label>
+		<input type="number" name="StartPrice" class="form-control" id="exampleFormControlInput1" placeholder="0">
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlSelect1">Choose Category</label>
+		<select class="form-control form-select" name="CategoryId" id="exampleFormControlSelect1">
+			@foreach (var item in Model.Categories)
+			{
+				<option value="@item.Id">@item.Name</option>
+
+			}
+
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlSelect2">Choose Brand</label>
+		<select class="form-control" name="BrandId" id="exampleFormControlSelect2">
+			@foreach (var item in Model.Brands)
+			{
+				<option value="@item.Id">@item.Name</option>
+
+			}
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlSelect2">Choose Color</label>
+		<select class="form-control" name="ColorId" id="exampleFormControlSelect2">
+			@foreach (var item in Model.Colors)
+			{
+				<option value="@item.Id">@item.Name</option>
+
+			}
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlTextarea1">Write Description</label>
+		<textarea class="form-control" id="exampleFormControlTextarea1" name="Description" rows="3"></textarea>
+	</div>
+	<div class="form-group">
+		<input type="file" name="files" multiple />
+	</div>
+	<button class="btn btn-success" type="submit">Save Info</button>
+
+</form>

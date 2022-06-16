@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section styles{
+<link href="~/css/login.css" rel="stylesheet" />
+}
+<div class="wrapper fadeInDown" style="margin-top: 2.5rem;">
+	<div id="formContent">
+		<!-- Tabs Titles -->
+		<!-- Icon -->
+		<div class="fadeIn first">
+		</div>
+
+		<!-- Login Form -->
+		<form id="loginForm" method="post" action="/home/loginpost">
+			<input type="text" id="login" class="fadeIn second" name="Email" placeholder="Email">
+			<small id="emailvalid" class="form-text
+                text-muted invalid-feedback">
+				Your email must be a valid email
+			</small>
+			<input type="text" id="password" class="fadeIn third" name="Password" placeholder="Password">
+			<h5 id="passCheck" style="color: red;">
+			</h5>
+			<input type="button" id="submitbtn" class="fadeIn fourth" value="Log In">
+		</form>
+		<!-- Remind Passowrd -->
+		<div id="formFooter">
+			<a class="underlineHover" href="#">Forgot Password?</a>
+		</div>
+
+	</div>
+</div>
+@section Scripts{
+    <script src="~/js/form.js"></script>
+}
