@@ -1,1 +1,1 @@
-LCW_Bitirme
+Proje, geliştirme sürecindeki zaman yetersizliği nedeni ile tam olarak istenen özelliklere sahip değildir. Proje Database First yaklaşımı ile geliştirilmiştir. Database oluşturmak için gerekli script dosyası paylaşılmıştır(script4.sql). Projede yeni üye kaydedilebilir, üye girişi yapılabilir, ürün eklenebilir, ürünler listelenebilir. 
